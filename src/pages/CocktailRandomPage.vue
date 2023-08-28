@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue'
-import AppLayout from '../components/applayout.vue'
+import AppLayout from '../components/Applayout.vue'
 import { COCKTAIL_RANDOM, INGREDIENTS_PIC } from '../constants/api'
 import axios from 'axios'
 import { Swiper, SwiperSlide } from 'swiper/vue'
@@ -29,9 +29,7 @@ const ingredients = computed(() => {
   return ingredients
 })
 
-
-
- getCoctail()
+getCoctail()
 </script>
 
 <template>
@@ -39,9 +37,7 @@ const ingredients = computed(() => {
     v-if="cocktail"
     class="wrap"
   >
-    <AppLayout
-      :imgUrl="cocktail.strDrinkThumb"
-    >
+    <AppLayout :imgUrl="cocktail.strDrinkThumb">
       <div class="wrapper">
         <div class="info">
           <h2 class="title">{{ cocktail.strDrink }}</h2>
